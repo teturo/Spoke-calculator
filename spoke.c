@@ -13,7 +13,7 @@
 */
 
 
-double keisan(double A,double B,double C)
+double calculation(double A,double B,double C)
 {
 	double l,L,a,alfa,rad,S,N;
 	//int S,N;
@@ -68,7 +68,7 @@ int main(int argc, char **argv)
 	B = PCD/2;
 	C = LN/2-D;
 	
-	sp = keisan(A,B,C);
+	sp = calculation(A,B,C);
 	printf("C=%lf\n",C);
 	
 	
