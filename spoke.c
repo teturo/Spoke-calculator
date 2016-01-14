@@ -15,17 +15,17 @@
 
 double keisan(double A,double B,double C)
 {
-	double l,L,a,alfa,rad;
-	int S,N;
+	double l,L,a,alfa,rad,S,N;
+	//int S,N;
 	
 	//l = A*A + B*B;
 	//l = A*A + B*B + C*C - 2*A*B*alfa; 
 	
 	printf("スポーク数を入力して下さい\n");
-	scanf("%d",&S);
+	scanf("%lf",&S);
 	
 	printf("組み数を入力して下さい\n");
-	scanf("%d",&N);
+	scanf("%lf",&N);
 	
 	a = 360 / S*N; 
 	printf("a=%lf\n",a);
