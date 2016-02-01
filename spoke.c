@@ -12,14 +12,50 @@
  * S スポーク数、N 組み数
 */
 
+double input_number(char str[128])
+{
+	double i;
+	printf("%sを入力して下さい。(単位ミリ、小数点以下も)\n",str);
+	scanf("%lf",&i);
+	
+	return i;
+}
+
+int check(double i)
+{
+	int j = 0;
+	
+	if(i < 0){
+		printf("負の数は扱えません\n");
+		j = -1;
+	}else if(i > 1000){
+		printf("大きすぎます\n");
+		j = -1;
+	}
+	
+	return j;
+}
+
+double input(char str[128])
+{
+	double i;
+	int j;
+	
+	i = input_number(str);
+	j = check(i);
+	
+	while(j < 0){
+		i = input_number(str);
+		j = check(i);
+	}
+	
+	return i;
+		
+}
 
 double calculation(double A,double B,double C)
 {
 	double l,L,a,alfa,rad,S,N;
-	//int S,N;
-	
-	//l = A*A + B*B;
-	//l = A*A + B*B + C*C - 2*A*B*alfa; 
 	
 	printf("スポーク数を入力して下さい\n");
 	scanf("%lf",&S);
@@ -46,29 +82,23 @@ double calculation(double A,double B,double C)
 
 int main(int argc, char **argv)
 {
-	double ERD,PCD,A,B,C,LN,D,L,sp;
-	int cn;
+	double ERD,PCD,A,B,C,LN,D,sp;
+	//int cn;
 	
-	printf("ERDを入力して下さい(単位ミリ、小数点以下も)\n");
-	scanf("%lf",&ERD);
-	
-	printf("PCDを入力して下さい(単位ミリ、小数点以下も)\n");
-	scanf("%lf",&PCD);
-	
-	printf("エンド幅を入力して下さい(単位ミリ、小数点以下も)\n");
-	scanf("%lf",&LN);
-	
-	printf("ロックナット-フランジ間距離を入力して下さい(単位ミリ、小数点以下も)\n");
-	scanf("%lf",&D);
-	
-	printf("LN=%d\n",LN);
-	
+	ERD = input("ERD");
+	PCD = input("PCD");
+	LN = input("エンド幅");
+    D = input("ロックナット-フランジ間距離");
 	
 	A = ERD/2;
 	B = PCD/2;
 	C = LN/2-D;
 	
 	sp = calculation(A,B,C);
+	
+	printf("ERD=%lf\n",ERD);
+	printf("PCD=%lf\n",PCD);
+	printf("D=%lf\n",D);
 	printf("C=%lf\n",C);
 	
 	
