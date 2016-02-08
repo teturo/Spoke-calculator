@@ -12,16 +12,16 @@
  * 
  */ 
 
-struct front_hub_data
+struct front_hub
 {
 	char name[128];
 	double pcd;
 	double old;
-	double range
+	double range;
 	double weight;
 };
 
-struct rear_hub_data
+struct rear_hub
 {
 	char name[128];
 	double pcd;
@@ -29,4 +29,20 @@ struct rear_hub_data
 	double range_r;
 	double range_l;
 	double weight;
+};
+
+struct front_hub Evolution_light = {
+	.name = "Evolution_light_front",
+	.pcd = 30,
+	.old = 100,
+	.range = 17.5,
+	.weight = 60,
+};
+
+struct front_hub HB2200 = {
+	.name = "HB-2200_front",
+	.pcd = 37,
+	.old = 100,
+	.range = 16,
+	.weight = 60,
 };
