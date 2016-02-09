@@ -11,7 +11,7 @@
 
 struct rim_data
 {
-	char name[128];
+	char *name;
 	double erd;
 	double weight;
 };

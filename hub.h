@@ -14,7 +14,7 @@
 
 struct front_hub
 {
-	char name[128];
+	char *name;
 	double pcd;
 	double old;
 	double range;
@@ -23,7 +23,7 @@ struct front_hub
 
 struct rear_hub
 {
-	char name[128];
+	char *name;
 	double pcd;
 	double old;
 	double range_r;
