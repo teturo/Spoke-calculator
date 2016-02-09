@@ -88,7 +88,7 @@ int main(int argc, char **argv)
 	ERD = input("ERD");
 	PCD = input("PCD");
 	LN = input("エンド幅");
-    D = input("ロックナット-フランジ間距離");
+	D = input("ロックナット-フランジ間距離");
 	
 	A = ERD/2;
 	B = PCD/2;
