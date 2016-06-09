@@ -18,8 +18,8 @@ struct rim_data
 
 struct rim_data cxp22 = {
 	.name = "CXP22",
-	.erd = 599,
-	.weight = 514,
+	.erd = 600,
+	.weight = 510,
 };
 
 struct rim_data al22 ={
